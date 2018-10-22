@@ -24,6 +24,11 @@ enum EndPoints: String {
     case trigger = "/trigger/"
 }
 
+/// API end paths.
+enum EndPaths: String {
+    case createOrUpdate = "create_or_update"
+}
+
 /// Event channel types.
 enum EventChannel: String {
     case app

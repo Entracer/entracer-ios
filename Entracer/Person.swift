@@ -19,9 +19,17 @@ public class Person: NSObject {
     /**
      Initializes object with data dictionary.
     */
-    init(data: NSDictionary)
-    {
+    init(data: NSDictionary) {
+        
         _data = NSMutableDictionary(dictionary: data)
+    }
+    
+    /**
+     Initializes object with empty data dictionary.
+    */
+    override init() {
+        
+        _data = NSMutableDictionary.init()
     }
     
     /**
@@ -127,6 +135,21 @@ public class Person: NSObject {
         
         set {
             _data.setValue(newValue, forKey: "status")
+        }
+    }
+    
+    var tags: [String]? {
+        
+        get {
+            if let object = _data.object(forKey: "tags") {
+                return object as? [String]
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "tags")
         }
     }
 }

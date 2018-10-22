@@ -20,9 +20,6 @@ open class Entracer {
     /// Person identifier
     var personID = ""
     
-    /// Organisation identifier
-    var organisationID = ""
-    
     /// Private initializer
     private init() {}
     
@@ -49,7 +46,6 @@ open class Entracer {
         let entracer = Entracer.instance
         entracer.apiToken = ""
         entracer.personID = ""
-        entracer.organisationID = ""
     }
     
     /**
@@ -60,6 +56,11 @@ open class Entracer {
     */
     open func trigger(event: String, personID: String?) {
         
+        guard apiToken != "" else {
+            // API token not set
+            return
+        }
+        
         let path = APIConstants.Version + EndPoints.events.rawValue + event + EndPoints.trigger.rawValue
         var dict = [String: Any]()
         if let pid = personID {
@@ -68,6 +69,37 @@ open class Entracer {
         dict["device_type"] = EventDevice.ios.rawValue
         let event = ["event": dict]
         let data = NSKeyedArchiver.archivedData(withRootObject: event)
+        
+        let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: APIConstants.DefaultHeaders) { (data) -> [String: Any]? in
+            // Response passing code block
+            return [:]
+        }
+        
+        Network.sendRequest(base: APIConstants.BasePath, resource: resource, failure: { (_, _, _) in
+            // Failure code block
+        }) { ([String: Any], _) in
+            // Success code block
+        }
+    }
+    
+    /**
+     Creates or updates existing Entracer person entry with email,
+     and returns the person identifier for reference. Function will also
+     update `personID` variable for Entracer instance.
+     
+     - parameter person: `Person` object with data.
+    */
+    open func createOrUpdate(person: Person) {
+        
+        guard apiToken != "" else {
+            // API token not set
+            return
+        }
+        
+        let path = APIConstants.Version + EndPoints.people.rawValue + EndPaths.createOrUpdate.rawValue
+        
+        let person = ["person": person.dictionaryObject()]
+        let data = NSKeyedArchiver.archivedData(withRootObject: person)
         
         let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: APIConstants.DefaultHeaders) { (data) -> [String: Any]? in
             // Response passing code block
