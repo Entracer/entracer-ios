@@ -53,7 +53,7 @@ open class Entracer {
     }
     
     /**
-     Triggers an event with person. A person can be specified optionally.
+     Triggers an event. A person can be specified optionally.
      
      - parameter event: Event identifier name.
      - parameter personID: Optional person id.
