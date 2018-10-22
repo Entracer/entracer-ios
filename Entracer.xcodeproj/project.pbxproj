@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81063C42216DBA5900124E9E /* Entracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81063C41216DBA5900124E9E /* Entracer.swift */; };
+		81063C4C216E086600124E9E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81063C4B216E086600124E9E /* Network.swift */; };
+		8125BFB22175DED800C41EB6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125BFB12175DED800C41EB6 /* Constants.swift */; };
+		8125BFB42175EDCE00C41EB6 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125BFB32175EDCE00C41EB6 /* JSONHelper.swift */; };
 		814DE1962164D0D0000B9D6B /* Entracer.h in Headers */ = {isa = PBXBuildFile; fileRef = 814DE1942164D0D0000B9D6B /* Entracer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81D348E22178665200164217 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D348E12178665200164217 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81063C41216DBA5900124E9E /* Entracer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entracer.swift; sourceTree = "<group>"; };
+		81063C48216DBB8000124E9E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		81063C49216DBB8000124E9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		81063C4A216DBB8C00124E9E /* Entracer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entracer.podspec; sourceTree = SOURCE_ROOT; };
+		81063C4B216E086600124E9E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8125BFB12175DED800C41EB6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8125BFB32175EDCE00C41EB6 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		814DE1912164D0D0000B9D6B /* Entracer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Entracer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814DE1942164D0D0000B9D6B /* Entracer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entracer.h; sourceTree = "<group>"; };
 		814DE1952164D0D0000B9D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		814DE19C2164D23E000B9D6B /* Entracer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entracer.podspec; sourceTree = SOURCE_ROOT; };
+		81D348E12178665200164217 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +40,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81063C3F216DB78000124E9E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8125BFB12175DED800C41EB6 /* Constants.swift */,
+				8125BFB32175EDCE00C41EB6 /* JSONHelper.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		81063C44216DBA7D00124E9E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				81063C4B216E086600124E9E /* Network.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		81063C45216DBAC300124E9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				814DE1942164D0D0000B9D6B /* Entracer.h */,
+				814DE1952164D0D0000B9D6B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81063C47216DBB5A00124E9E /* Project Files */ = {
+			isa = PBXGroup;
+			children = (
+				81063C4A216DBB8C00124E9E /* Entracer.podspec */,
+				81063C48216DBB8000124E9E /* LICENSE */,
+				81063C49216DBB8000124E9E /* README.md */,
+			);
+			name = "Project Files";
+			sourceTree = "<group>";
+		};
 		814DE1872164D0D0000B9D6B = {
 			isa = PBXGroup;
 			children = (
@@ -47,11 +95,22 @@
 		814DE1932164D0D0000B9D6B /* Entracer */ = {
 			isa = PBXGroup;
 			children = (
-				814DE1942164D0D0000B9D6B /* Entracer.h */,
-				814DE1952164D0D0000B9D6B /* Info.plist */,
-				814DE19C2164D23E000B9D6B /* Entracer.podspec */,
+				81D348E02178661D00164217 /* Model */,
+				81063C44216DBA7D00124E9E /* Networking */,
+				81063C3F216DB78000124E9E /* Utilities */,
+				81063C41216DBA5900124E9E /* Entracer.swift */,
+				81063C45216DBAC300124E9E /* Supporting Files */,
+				81063C47216DBB5A00124E9E /* Project Files */,
 			);
 			path = Entracer;
+			sourceTree = "<group>";
+		};
+		81D348E02178661D00164217 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81D348E12178665200164217 /* Person.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +156,7 @@
 				TargetAttributes = {
 					814DE1902164D0D0000B9D6B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -132,6 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D348E22178665200164217 /* Person.swift in Sources */,
+				81063C4C216E086600124E9E /* Network.swift in Sources */,
+				81063C42216DBA5900124E9E /* Entracer.swift in Sources */,
+				8125BFB42175EDCE00C41EB6 /* JSONHelper.swift in Sources */,
+				8125BFB22175DED800C41EB6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +328,7 @@
 		814DE19A2164D0D0000B9D6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -282,6 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,6 +357,7 @@
 		814DE19B2164D0D0000B9D6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
