@@ -1,38 +1,32 @@
 //
-//  Person.swift
+//  Organisation.swift
 //  Entracer
 //
-//  Created by Tharindu Madushanka on 10/18/18.
+//  Created by Tharindu Madushanka on 10/23/18.
 //  Copyright © 2018 Entracer. All rights reserved.
 //
 
 import Foundation
 
-/// Person types.
-public enum PersonType: String {
-    case Lead
-    case Converted
-}
-
-/// Person status types.
-public enum PersonStatus: String {
+/// Organisation status types.
+public enum OrganisationStatus: String {
     case New
-    case Validated
-    case Qualified
-    case Rejected
+    case Active
+    case Dormant
+    case Blacklisted
 }
 
 /**
- Model class to represent People objects, you may write extensions to add
- additional properties of person.
+ Model class to represent Organisation objects, you may write extensions to add
+ additional properties for organisation.
  */
-public class Person: NSObject {
+public class Organisation: NSObject {
     
     fileprivate var _data: NSMutableDictionary
     
     /**
      Initializes object with data dictionary.
-    */
+     */
     init(data: NSDictionary) {
         
         _data = NSMutableDictionary(dictionary: data)
@@ -40,17 +34,17 @@ public class Person: NSObject {
     
     /**
      Initializes object with empty data dictionary.
-    */
+     */
     override init() {
         
         _data = NSMutableDictionary.init()
     }
     
     /**
-     Returns dictionary object representation of person
+     Returns dictionary object representation of organisation
      
      - returns: Dictionary object.
-    */
+     */
     func dictionaryObject() -> NSMutableDictionary {
         return _data
     }
@@ -77,10 +71,10 @@ public class Person: NSObject {
         }
     }
     
-    var type: String? {
+    var name: String? {
         
         get {
-            if let object = _data.object(forKey: "type") as? String {
+            if let object = _data.object(forKey: "name") as? String {
                 return object
             } else {
                 return nil
@@ -88,40 +82,10 @@ public class Person: NSObject {
         }
         
         set {
-            _data.setValue(newValue, forKey: "type")
+            _data.setValue(newValue, forKey: "name")
         }
     }
-    
-    var first_name: String? {
         
-        get {
-            if let object = _data.object(forKey: "first_name") as? String {
-                return object
-            } else {
-                return nil
-            }
-        }
-        
-        set {
-            _data.setValue(newValue, forKey: "first_name")
-        }
-    }
-    
-    var last_name: String? {
-        
-        get {
-            if let object = _data.object(forKey: "last_name") as? String {
-                return object
-            } else {
-                return nil
-            }
-        }
-        
-        set {
-            _data.setValue(newValue, forKey: "last_name")
-        }
-    }
-    
     var email: String? {
         
         get {
