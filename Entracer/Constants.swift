@@ -21,6 +21,7 @@ struct APIConstants {
 enum EndPoints: String {
     case events = "/events/"
     case people = "/people/"
+    case organisations = "/organisations/"
     case trigger = "/trigger/"
 }
 
@@ -29,9 +30,12 @@ enum EndPaths: String {
     case createOrUpdate = "create_or_update"
 }
 
-/// Event channel types.
+/// Event channel types examples.
 enum EventChannel: String {
-    case app
+    case web
+    case mobile
+    case social_media
+    case support
 }
 
 /// Event device types.
