@@ -10,9 +10,11 @@
 		81063C42216DBA5900124E9E /* Entracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81063C41216DBA5900124E9E /* Entracer.swift */; };
 		81063C4C216E086600124E9E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81063C4B216E086600124E9E /* Network.swift */; };
 		8125BFB22175DED800C41EB6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125BFB12175DED800C41EB6 /* Constants.swift */; };
-		8125BFB42175EDCE00C41EB6 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125BFB32175EDCE00C41EB6 /* JSONHelper.swift */; };
+		8125BFB42175EDCE00C41EB6 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125BFB32175EDCE00C41EB6 /* JSON.swift */; };
 		814DE1962164D0D0000B9D6B /* Entracer.h in Headers */ = {isa = PBXBuildFile; fileRef = 814DE1942164D0D0000B9D6B /* Entracer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		815565F22181C7860081ECD9 /* PrintLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815565F12181C7860081ECD9 /* PrintLogger.swift */; };
 		8169E371217EE06200E13FE1 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169E370217EE06200E13FE1 /* Organisation.swift */; };
+		8169E374217F29C000E13FE1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169E373217F29C000E13FE1 /* Logger.swift */; };
 		81D348E22178665200164217 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D348E12178665200164217 /* Person.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +25,13 @@
 		81063C4A216DBB8C00124E9E /* Entracer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Entracer.podspec; sourceTree = SOURCE_ROOT; };
 		81063C4B216E086600124E9E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		8125BFB12175DED800C41EB6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8125BFB32175EDCE00C41EB6 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
+		8125BFB32175EDCE00C41EB6 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		814DE1912164D0D0000B9D6B /* Entracer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Entracer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814DE1942164D0D0000B9D6B /* Entracer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entracer.h; sourceTree = "<group>"; };
 		814DE1952164D0D0000B9D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815565F12181C7860081ECD9 /* PrintLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintLogger.swift; sourceTree = "<group>"; };
 		8169E370217EE06200E13FE1 /* Organisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organisation.swift; sourceTree = "<group>"; };
+		8169E373217F29C000E13FE1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		81D348E12178665200164217 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				8125BFB12175DED800C41EB6 /* Constants.swift */,
-				8125BFB32175EDCE00C41EB6 /* JSONHelper.swift */,
+				8125BFB32175EDCE00C41EB6 /* JSON.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -97,6 +101,7 @@
 		814DE1932164D0D0000B9D6B /* Entracer */ = {
 			isa = PBXGroup;
 			children = (
+				8169E372217F267E00E13FE1 /* Logs */,
 				81D348E02178661D00164217 /* Model */,
 				81063C44216DBA7D00124E9E /* Networking */,
 				81063C3F216DB78000124E9E /* Utilities */,
@@ -105,6 +110,15 @@
 				81063C47216DBB5A00124E9E /* Project Files */,
 			);
 			path = Entracer;
+			sourceTree = "<group>";
+		};
+		8169E372217F267E00E13FE1 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				8169E373217F29C000E13FE1 /* Logger.swift */,
+				815565F12181C7860081ECD9 /* PrintLogger.swift */,
+			);
+			name = Logs;
 			sourceTree = "<group>";
 		};
 		81D348E02178661D00164217 /* Model */ = {
@@ -196,10 +210,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D348E22178665200164217 /* Person.swift in Sources */,
+				815565F22181C7860081ECD9 /* PrintLogger.swift in Sources */,
 				8169E371217EE06200E13FE1 /* Organisation.swift in Sources */,
 				81063C4C216E086600124E9E /* Network.swift in Sources */,
 				81063C42216DBA5900124E9E /* Entracer.swift in Sources */,
-				8125BFB42175EDCE00C41EB6 /* JSONHelper.swift in Sources */,
+				8169E374217F29C000E13FE1 /* Logger.swift in Sources */,
+				8125BFB42175EDCE00C41EB6 /* JSON.swift in Sources */,
 				8125BFB22175DED800C41EB6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

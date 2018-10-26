@@ -1,5 +1,5 @@
 //
-//  JSONHelper.swift
+//  JSON.swift
 //  Entracer
 //
 //  Created by Tharindu Madushanka on 10/16/18.
