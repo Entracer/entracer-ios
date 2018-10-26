@@ -46,6 +46,18 @@ open class Entracer {
         Logger.info(text: "Configured with api token: \(apiToken)")
     }
     
+    /**
+     Set logger level, this can be used to set different levels of logging as well as to
+     completely disable logging using `LogLevel.none`. Defaults to `LogLevel.debug`.
+     
+     - parameter level: Log level.
+    */
+    open class func setLogger(level: LogLevel) {
+        
+        Logger.setLogger(level: level)
+        Logger.debug(text: "Logger level changed: \(level)")
+    }
+    
     /// Debuggable description.
     open var debugDescription: String {
         return "<\(String(describing: self)) Token: \(apiToken)>"

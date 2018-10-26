@@ -9,7 +9,7 @@
 import Foundation
 
 /// Defines levels of logging that could be tagged for log messages.
-enum LogLevel: Int {
+public enum LogLevel: Int {
     /// Displays *none*
     case none = -1
     /// Displays *all* logs useful for developer.
@@ -58,7 +58,7 @@ protocol LoggerDelegate {
 class Logger {
     
     private static var delegates: [LoggerDelegate] = [LoggerDelegate]()
-    private static var logLevel: LogLevel = .none
+    private static var logLevel: LogLevel = .debug
     
     /**
      Adds LoggerDelegate object to display log messages.
