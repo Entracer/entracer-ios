@@ -34,6 +34,18 @@ public struct JSON {
     fileprivate var rawBool: Bool = false
     
     /**
+     Returns a json data object to be communicated with a server as JSON data.
+     
+     - parameter: dictionary object.
+     - returns: JSON data to be communicated with a server.
+    */
+    static func data(with dictionary: [String: AnyObject]) throws -> Data {
+        
+        let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+        return data
+    }
+    
+    /**
      Initializes a JSON object using data.
      
      - parameter data: Data used to convert to JSON, Top level object in data is an array or dictionary.

@@ -12,19 +12,19 @@ import Foundation
 open class Entracer {
     
     /// The singleton `Entracer` instance.
-    static let instance = Entracer()
+    public static let instance = Entracer()
     
     /// Entracer API token.
-    var apiToken = ""
+    open var apiToken = ""
     
     /// Entracer API base path.
-    var apiBasePath = APIConstants.BasePath
+    open var apiBasePath = APIConstants.BasePath
     
     /// Person identifier.
-    var personID = ""
+    open var personID = ""
     
     /// Organisation identifier.
-    var organisationID = ""
+    open var organisationID = ""
     
     /// Private initializer.
     private init() {
@@ -65,6 +65,7 @@ open class Entracer {
     
     /**
      Resets all properties, useful when logging out.
+     Need to configure again when reset.
      */
     open class func reset() {
         
@@ -84,9 +85,9 @@ open class Entracer {
      - parameter event: Event identifier name.
      - parameter personID: Optional person id.
      - parameter organisationID: Optional organisation id.
-     - parameter channel: Optional channel name.
+     - parameter channel: channel name.
     */
-    open func trigger(event: String, personID: String?, organisationID: String?, channel: String?) {
+    open func trigger(event: String, personID: String?, organisationID: String?, channel: String) throws {
         
         guard apiToken != "" else {
             // API token not set
@@ -101,14 +102,13 @@ open class Entracer {
         } else if let oid = organisationID {
             dict["organisation_id"] = oid
         }
-        if let ch = channel {
-            dict["channel"] = ch
-        }
+        dict["channel"] = channel
         dict["device_type"] = EventDevice.ios.rawValue
-        let event = ["event": dict]
-        let data = NSKeyedArchiver.archivedData(withRootObject: event)
+        let event = ["event": dict] as [String: AnyObject]
+        Logger.debug(text: "Event: \(event)")
+        let data = try JSON.data(with: event)
         
-        let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: APIConstants.DefaultHeaders) { (data) -> [String: Any]? in
+        let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: Network.buildHeaders(token: apiToken)) { (data) -> [String: Any]? in
             // Response passing code block
             do {
                 let json = try JSON.init(with: data)
@@ -144,7 +144,7 @@ open class Entracer {
      
      - parameter person: `Person` object with data.
     */
-    open func createOrUpdate(person: Person) {
+    open func createOrUpdate(person: Person) throws {
         
         guard apiToken != "" else {
             // API token not set
@@ -154,10 +154,11 @@ open class Entracer {
         
         let path = APIConstants.Version + EndPoints.people.rawValue + EndPaths.createOrUpdate.rawValue
         
-        let person = ["person": person.dictionaryObject()]
-        let data = NSKeyedArchiver.archivedData(withRootObject: person)
+        let dict = ["person": person.dictionaryObject()]
+        Logger.debug(text: "Person: \(dict)")
+        let data = try JSON.data(with: dict)
         
-        let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: APIConstants.DefaultHeaders) { (data) -> [String: Any]? in
+        let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: Network.buildHeaders(token: apiToken)) { (data) -> [String: Any]? in
             // Parse response to read person id
             do {
                 let json = try JSON.init(with: data)
@@ -194,7 +195,7 @@ open class Entracer {
      
      - parameter organisation: `Organisation` object with data.
      */
-    open func createOrUpdate(organisation: Organisation) {
+    open func createOrUpdate(organisation: Organisation) throws {
         
         guard apiToken != "" else {
             // API token not set
@@ -204,14 +205,15 @@ open class Entracer {
         
         let path = APIConstants.Version + EndPoints.organisations.rawValue + EndPaths.createOrUpdate.rawValue
         
-        let person = ["organisation": organisation.dictionaryObject()]
-        let data = NSKeyedArchiver.archivedData(withRootObject: person)
+        let dict = ["organisation": organisation.dictionaryObject()]
+        Logger.debug(text: "Organisation: \(dict)")
+        let data = try JSON.data(with: dict)
         
-        let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: APIConstants.DefaultHeaders) { (data) -> [String: Any]? in
+        let resource = Network.buildResource(path: path, method: .post, requestBody: data, queryItems: nil, headers: Network.buildHeaders(token: apiToken)) { (data) -> [String: Any]? in
             // Parse response to read organisation id
             do {
                 let json = try JSON.init(with: data)
-                if let dict = json.dictionary {
+                if let dict = json.dictionary?["organisation"] as? [String: AnyObject] {
                     let org = Organisation.init(data: dict as NSDictionary)
                     Entracer.instance.organisationID = org.ident!
                     Logger.debug(text: "Organisation created or updated: \(org)")

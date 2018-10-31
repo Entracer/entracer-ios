@@ -10,8 +10,8 @@ import Foundation
 
 /// API constants.
 struct APIConstants {
-    static let BasePath = "https://app.entracer.com/"
-    static let Version = "api/v1"
+    static let BasePath = "https://app.entracer.com"
+    static let Version = "/api/v1"
     static let DefaultHeaders: [String: String] = [
         "Accept": "application/json",
         "Content-Type": "application/json"]
@@ -40,8 +40,9 @@ enum EventChannel: String {
 
 /// Event device types.
 enum EventDevice: String {
-    case web
-    case android
-    case ios
+    case windows = "Web/Windows"
+    case mac = "Web/Mac"
+    case android = "Mobile/Android"
+    case ios = "Mobile/iOS"
 }
 
