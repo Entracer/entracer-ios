@@ -82,7 +82,7 @@ open class Entracer {
      
      - note: If person identity is specified, organisation identity is ignored.
      
-     - parameter event: Event identifier name.
+     - parameter event: Event name.
      - parameter personID: Optional person id.
      - parameter organisationID: Optional organisation id.
      - parameter channel: channel name.
@@ -95,13 +95,14 @@ open class Entracer {
             return
         }
         
-        let path = APIConstants.Version + EndPoints.events.rawValue + event + EndPoints.trigger.rawValue
+        let path = APIConstants.Version + EndPoints.events.rawValue + EndPoints.trigger.rawValue
         var dict = [String: Any]()
         if let pid = personID {
             dict["person_id"] = pid
         } else if let oid = organisationID {
             dict["organisation_id"] = oid
         }
+        dict["name"] = event
         dict["channel"] = channel
         dict["device_type"] = EventDevice.ios.rawValue
         let event = ["event": dict] as [String: AnyObject]
@@ -143,8 +144,9 @@ open class Entracer {
      - note: Select person or organisation based on your requirement.
      
      - parameter person: `Person` object with data.
+     - parameter completion: Optional completion handler to be executed on success.
     */
-    open func createOrUpdate(person: Person) throws {
+    open func createOrUpdate(person: Person, completion: (() -> Void)? = nil) throws {
         
         guard apiToken != "" else {
             // API token not set
@@ -162,10 +164,11 @@ open class Entracer {
             // Parse response to read person id
             do {
                 let json = try JSON.init(with: data)
-                if let dict = json.dictionary {
+                if let dict = json.dictionary?["person"] as? [String: AnyObject] {
                     let pn = Person.init(data: dict as NSDictionary)
                     Entracer.instance.personID = pn.ident!
                     Logger.debug(text: "Person created or updated: \(pn)")
+                    completion?()
                 } else {
                     Logger.debug(text: "Person create or update unexpected response.")
                 }
@@ -194,8 +197,9 @@ open class Entracer {
      - note: Select organisation or person based on your requirement.
      
      - parameter organisation: `Organisation` object with data.
+     - parameter completion: Optional completion handler to be executed on success.
      */
-    open func createOrUpdate(organisation: Organisation) throws {
+    open func createOrUpdate(organisation: Organisation, completion: (() -> Void)? = nil) throws {
         
         guard apiToken != "" else {
             // API token not set
@@ -217,6 +221,7 @@ open class Entracer {
                     let org = Organisation.init(data: dict as NSDictionary)
                     Entracer.instance.organisationID = org.ident!
                     Logger.debug(text: "Organisation created or updated: \(org)")
+                    completion?()
                 } else {
                     Logger.debug(text: "Organisation create or update unexpected response.")
                 }

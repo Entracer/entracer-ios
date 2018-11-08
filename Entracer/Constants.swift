@@ -19,15 +19,15 @@ struct APIConstants {
 
 /// API end points.
 enum EndPoints: String {
-    case events = "/events/"
-    case people = "/people/"
-    case organisations = "/organisations/"
-    case trigger = "/trigger/"
+    case events = "/events"
+    case people = "/people"
+    case organisations = "/organisations"
+    case trigger = "/trigger"
 }
 
 /// API end paths.
 enum EndPaths: String {
-    case createOrUpdate = "create_or_update"
+    case createOrUpdate = "/create_or_update"
 }
 
 /// Event channel types examples.
