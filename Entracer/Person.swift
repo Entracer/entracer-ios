@@ -26,14 +26,14 @@ public enum PersonStatus: String {
  Model class to represent People objects, you may write extensions to add
  additional properties of person.
  */
-public class Person: NSObject {
+open class Person: NSObject {
     
-    fileprivate var _data: NSMutableDictionary
+    open var _data: NSMutableDictionary
     
     /**
      Initializes object with data dictionary.
     */
-    init(data: NSDictionary) {
+    public init(data: NSDictionary) {
         
         _data = NSMutableDictionary(dictionary: data)
     }
@@ -41,7 +41,7 @@ public class Person: NSObject {
     /**
      Initializes object with empty data dictionary.
     */
-    override init() {
+    public override init() {
         
         _data = NSMutableDictionary.init()
     }
@@ -51,18 +51,18 @@ public class Person: NSObject {
      
      - returns: Dictionary object.
     */
-    func dictionaryObject() -> NSMutableDictionary {
+    public func dictionaryObject() -> NSMutableDictionary {
         return _data
     }
     
     /// Debuggable description of person.
-    override public var description: String {
-        return "<\(String(describing: self)) Data: \(_data)>"
+    override open var description: String {
+        return "<\(String(describing: Person.self)) Data: \(_data)>"
     }
     
     // MARK:- Properties
     
-    var ident: String? {
+    open var ident: String? {
         
         get {
             if let object = _data.object(forKey: "id") as? String {
@@ -77,7 +77,7 @@ public class Person: NSObject {
         }
     }
     
-    var type: String? {
+    open var type: String? {
         
         get {
             if let object = _data.object(forKey: "type") as? String {
@@ -92,7 +92,7 @@ public class Person: NSObject {
         }
     }
     
-    var first_name: String? {
+    open var first_name: String? {
         
         get {
             if let object = _data.object(forKey: "first_name") as? String {
@@ -107,7 +107,7 @@ public class Person: NSObject {
         }
     }
     
-    var last_name: String? {
+    open var last_name: String? {
         
         get {
             if let object = _data.object(forKey: "last_name") as? String {
@@ -122,7 +122,7 @@ public class Person: NSObject {
         }
     }
     
-    var email: String? {
+    open var email: String? {
         
         get {
             if let object = _data.object(forKey: "email") as? String {
@@ -137,7 +137,37 @@ public class Person: NSObject {
         }
     }
     
-    var status: String? {
+    open var mobile: String? {
+        
+        get {
+            if let object = _data.object(forKey: "mobile") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "mobile")
+        }
+    }
+    
+    open var website: String? {
+        
+        get {
+            if let object = _data.object(forKey: "website") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "website")
+        }
+    }
+    
+    open var status: String? {
         
         get {
             if let object = _data.object(forKey: "status") as? String {
@@ -152,7 +182,7 @@ public class Person: NSObject {
         }
     }
     
-    var tags: [String]? {
+    open var tags: [String]? {
         
         get {
             if let object = _data.object(forKey: "tags") {
@@ -164,6 +194,141 @@ public class Person: NSObject {
         
         set {
             _data.setValue(newValue, forKey: "tags")
+        }
+    }
+    
+    open var department: [String]? {
+        
+        get {
+            if let object = _data.object(forKey: "department") {
+                return object as? [String]
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "department")
+        }
+    }
+    
+    open var title: [String]? {
+        
+        get {
+            if let object = _data.object(forKey: "title") {
+                return object as? [String]
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "title")
+        }
+    }
+    
+    open var job_title: [String]? {
+        
+        get {
+            if let object = _data.object(forKey: "job_title") {
+                return object as? [String]
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "job_title")
+        }
+    }
+    
+    open var street_1: String? {
+        
+        get {
+            if let object = _data.object(forKey: "street_1") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "street_1")
+        }
+    }
+    
+    open var street_2: String? {
+        
+        get {
+            if let object = _data.object(forKey: "street_2") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "street_2")
+        }
+    }
+    
+    open var city: String? {
+        
+        get {
+            if let object = _data.object(forKey: "city") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "city")
+        }
+    }
+    
+    open var state: String? {
+        
+        get {
+            if let object = _data.object(forKey: "state") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "state")
+        }
+    }
+    
+    open var zip_code: String? {
+        
+        get {
+            if let object = _data.object(forKey: "zip_code") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "zip_code")
+        }
+    }
+    
+    open var country: String? {
+        
+        get {
+            if let object = _data.object(forKey: "country") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "country")
         }
     }
 }

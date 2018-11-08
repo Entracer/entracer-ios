@@ -10,8 +10,8 @@ import Foundation
 
 /// API constants.
 struct APIConstants {
-    static let BasePath = "https://app.entracer.com/"
-    static let Version = "api/v1"
+    static let BasePath = "https://app.entracer.com"
+    static let Version = "/api/v1"
     static let DefaultHeaders: [String: String] = [
         "Accept": "application/json",
         "Content-Type": "application/json"]
@@ -19,15 +19,15 @@ struct APIConstants {
 
 /// API end points.
 enum EndPoints: String {
-    case events = "/events/"
-    case people = "/people/"
-    case organisations = "/organisations/"
-    case trigger = "/trigger/"
+    case events = "/events"
+    case people = "/people"
+    case organisations = "/organisations"
+    case trigger = "/trigger"
 }
 
 /// API end paths.
 enum EndPaths: String {
-    case createOrUpdate = "create_or_update"
+    case createOrUpdate = "/create_or_update"
 }
 
 /// Event channel types examples.
@@ -40,8 +40,9 @@ enum EventChannel: String {
 
 /// Event device types.
 enum EventDevice: String {
-    case web
-    case android
-    case ios
+    case windows = "Web/Windows"
+    case mac = "Web/Mac"
+    case android = "Mobile/Android"
+    case ios = "Mobile/iOS"
 }
 

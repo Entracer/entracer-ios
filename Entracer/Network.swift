@@ -148,4 +148,17 @@ open class Network {
                         parse: parse)
     }
     
+    /**
+     Builds request headers with api token.
+     
+     - parameter token: API token.
+     - returns: API Headers for request.
+    */
+    class func buildHeaders(token: String) -> [String: String] {
+        
+        var headers = APIConstants.DefaultHeaders
+        headers["Authorization"] = "Token token=\(token)"
+        return headers
+    }
+    
 }

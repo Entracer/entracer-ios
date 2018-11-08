@@ -12,14 +12,14 @@ import Foundation
 public enum LogLevel: Int {
     /// Displays *none*
     case none = -1
-    /// Displays *all* logs useful for developer.
-    case debug = 0
-    /// Displays *all* but debug logs.
-    case info = 1
-    /// Displays *only* warnings and above.
-    case warning = 2
     /// Displays *only* error logs.
-    case error = 3
+    case error = 0
+    /// Displays *only* warnings and above.
+    case warning = 1
+    /// Displays *all* but debug logs.
+    case info = 2
+    /// Displays *all* logs useful for developer.
+    case debug = 3
 }
 
 /// `LogMessage` holds all the details for each log message.

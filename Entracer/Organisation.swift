@@ -20,14 +20,14 @@ public enum OrganisationStatus: String {
  Model class to represent Organisation objects, you may write extensions to add
  additional properties for organisation.
  */
-public class Organisation: NSObject {
+open class Organisation: NSObject {
     
     fileprivate var _data: NSMutableDictionary
     
     /**
      Initializes object with data dictionary.
      */
-    init(data: NSDictionary) {
+    public init(data: NSDictionary) {
         
         _data = NSMutableDictionary(dictionary: data)
     }
@@ -35,7 +35,7 @@ public class Organisation: NSObject {
     /**
      Initializes object with empty data dictionary.
      */
-    override init() {
+    public override init() {
         
         _data = NSMutableDictionary.init()
     }
@@ -45,18 +45,18 @@ public class Organisation: NSObject {
      
      - returns: Dictionary object.
      */
-    func dictionaryObject() -> NSMutableDictionary {
+    public func dictionaryObject() -> NSMutableDictionary {
         return _data
     }
     
     /// Debuggable description of person.
-    override public var description: String {
-        return "<\(String(describing: self)) Data: \(_data)>"
+    override open var description: String {
+        return "<\(String(describing: Organisation.self)) Data: \(_data)>"
     }
     
     // MARK:- Properties
     
-    var ident: String? {
+    open var ident: String? {
         
         get {
             if let object = _data.object(forKey: "id") as? String {
@@ -71,7 +71,7 @@ public class Organisation: NSObject {
         }
     }
     
-    var name: String? {
+    open var name: String? {
         
         get {
             if let object = _data.object(forKey: "name") as? String {
@@ -86,7 +86,7 @@ public class Organisation: NSObject {
         }
     }
         
-    var email: String? {
+    open var email: String? {
         
         get {
             if let object = _data.object(forKey: "email") as? String {
@@ -101,7 +101,52 @@ public class Organisation: NSObject {
         }
     }
     
-    var status: String? {
+    open var phone: String? {
+        
+        get {
+            if let object = _data.object(forKey: "phone") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "phone")
+        }
+    }
+    
+    open var fax: String? {
+        
+        get {
+            if let object = _data.object(forKey: "fax") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "fax")
+        }
+    }
+    
+    open var website: String? {
+        
+        get {
+            if let object = _data.object(forKey: "website") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "website")
+        }
+    }
+    
+    open var status: String? {
         
         get {
             if let object = _data.object(forKey: "status") as? String {
@@ -116,7 +161,7 @@ public class Organisation: NSObject {
         }
     }
     
-    var tags: [String]? {
+    open var tags: [String]? {
         
         get {
             if let object = _data.object(forKey: "tags") {
@@ -128,6 +173,186 @@ public class Organisation: NSObject {
         
         set {
             _data.setValue(newValue, forKey: "tags")
+        }
+    }
+    
+    open var billing_street_1: String? {
+        
+        get {
+            if let object = _data.object(forKey: "billing_street_1") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "billing_street_1")
+        }
+    }
+    
+    open var billing_street_2: String? {
+        
+        get {
+            if let object = _data.object(forKey: "billing_street_2") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "billing_street_2")
+        }
+    }
+    
+    open var billing_city: String? {
+        
+        get {
+            if let object = _data.object(forKey: "billing_city") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "billing_city")
+        }
+    }
+    
+    open var billing_state: String? {
+        
+        get {
+            if let object = _data.object(forKey: "billing_state") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "billing_state")
+        }
+    }
+    
+    open var billing_zip_code: String? {
+        
+        get {
+            if let object = _data.object(forKey: "billing_zip_code") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "billing_zip_code")
+        }
+    }
+    
+    open var billing_country: String? {
+        
+        get {
+            if let object = _data.object(forKey: "billing_country") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "billing_country")
+        }
+    }
+    
+    open var shipping_street_1: String? {
+        
+        get {
+            if let object = _data.object(forKey: "shipping_street_1") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "shipping_street_1")
+        }
+    }
+    
+    open var shipping_street_2: String? {
+        
+        get {
+            if let object = _data.object(forKey: "shipping_street_2") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "shipping_street_2")
+        }
+    }
+    
+    open var shipping_city: String? {
+        
+        get {
+            if let object = _data.object(forKey: "shipping_city") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "shipping_city")
+        }
+    }
+    
+    open var shipping_state: String? {
+        
+        get {
+            if let object = _data.object(forKey: "shipping_state") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "shipping_state")
+        }
+    }
+    
+    open var shipping_zip_code: String? {
+        
+        get {
+            if let object = _data.object(forKey: "shipping_zip_code") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "shipping_zip_code")
+        }
+    }
+    
+    open var shipping_country: String? {
+        
+        get {
+            if let object = _data.object(forKey: "shipping_country") as? String {
+                return object
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            _data.setValue(newValue, forKey: "shipping_country")
         }
     }
 }
