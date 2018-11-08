@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Entracer"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Entracer tracking library for iOS (Swift)"
   s.homepage     = "https://www.entracer.com"
   s.license      = "Apache License, Version 2.0"
