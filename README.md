@@ -4,6 +4,7 @@ Entracer tracking library for iOS (Swift) makes it easier to integrate Entracer 
 
 - [Installation](#installation)
     - [CocoaPods](#cocoapods)
+    - [Carthage](#carthage)
     - [Manual Installation](#manual-installation)
     
 <a name="installation"></a>
@@ -17,6 +18,13 @@ You may integrate Entracer framework via Cocoapods or manually using following s
 Entracer supports `CocoaPods` for easy installation. Add following line to your pod file.
 
 `pod 'Entracer'`
+
+<a name="carthage"></a>
+## Carthage
+
+Entracer also supports `Carthage` installation. Add following line to your cartfile.
+
+`github "Entracer/entracer-ios"`
 
 <a name="manual-installation"></a>
 ## Manual Installation
