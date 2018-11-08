@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   s.author       = { "Entracer" => "info@entracer.com" }
   s.platform     = :ios
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/Entracer/entracer-ios", :tag => "#{s.version}" }
+  s.swift_version = '4.2'
+  s.source        = { :git => "https://github.com/Entracer/entracer-ios.git", :tag => "#{s.version}" }
   s.source_files  = ['Entracer/*.swift', 'Entracer/Entracer.h']
 
 end
