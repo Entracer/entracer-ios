@@ -78,9 +78,7 @@ open class Entracer {
     }
     
     /**
-     Triggers an event. A person or organisation can be specified optionally.
-     
-     - note: If person identity is specified, organisation identity is ignored.
+     Triggers an event. A person and organisation can be specified optionally.
      
      - parameter event: Event name.
      - parameter personID: Optional person id.
@@ -99,7 +97,8 @@ open class Entracer {
         var dict = [String: Any]()
         if let pid = personID {
             dict["person_id"] = pid
-        } else if let oid = organisationID {
+        }
+        if let oid = organisationID {
             dict["organisation_id"] = oid
         }
         dict["name"] = event
