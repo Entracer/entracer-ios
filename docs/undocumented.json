@@ -1,0 +1,411 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 13,
+      "symbol": "JSONType.number",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 14,
+      "symbol": "JSONType.string",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 15,
+      "symbol": "JSONType.bool",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 16,
+      "symbol": "JSONType.array",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 17,
+      "symbol": "JSONType.dictionary",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 18,
+      "symbol": "JSONType.null",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 19,
+      "symbol": "JSONType.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 141,
+      "symbol": "JSON.array",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/JSON.swift",
+      "line": 150,
+      "symbol": "JSON.dictionary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 13,
+      "symbol": "OrganisationStatus.New",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 14,
+      "symbol": "OrganisationStatus.Active",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 15,
+      "symbol": "OrganisationStatus.Dormant",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 16,
+      "symbol": "OrganisationStatus.Blacklisted",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 59,
+      "symbol": "Organisation.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 74,
+      "symbol": "Organisation.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 89,
+      "symbol": "Organisation.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 104,
+      "symbol": "Organisation.phone",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 119,
+      "symbol": "Organisation.fax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 134,
+      "symbol": "Organisation.website",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 149,
+      "symbol": "Organisation.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 164,
+      "symbol": "Organisation.tags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 179,
+      "symbol": "Organisation.billing_street_1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 194,
+      "symbol": "Organisation.billing_street_2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 209,
+      "symbol": "Organisation.billing_city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 224,
+      "symbol": "Organisation.billing_state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 239,
+      "symbol": "Organisation.billing_zip_code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 254,
+      "symbol": "Organisation.billing_country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 269,
+      "symbol": "Organisation.shipping_street_1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 284,
+      "symbol": "Organisation.shipping_street_2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 299,
+      "symbol": "Organisation.shipping_city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 314,
+      "symbol": "Organisation.shipping_state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 329,
+      "symbol": "Organisation.shipping_zip_code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Organisation.swift",
+      "line": 344,
+      "symbol": "Organisation.shipping_country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 13,
+      "symbol": "PersonType.Lead",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 14,
+      "symbol": "PersonType.Converted",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 19,
+      "symbol": "PersonStatus.New",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 20,
+      "symbol": "PersonStatus.Validated",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 21,
+      "symbol": "PersonStatus.Qualified",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 22,
+      "symbol": "PersonStatus.Rejected",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 31,
+      "symbol": "Person._data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 65,
+      "symbol": "Person.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 80,
+      "symbol": "Person.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 95,
+      "symbol": "Person.first_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 110,
+      "symbol": "Person.last_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 125,
+      "symbol": "Person.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 140,
+      "symbol": "Person.mobile",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 155,
+      "symbol": "Person.website",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 170,
+      "symbol": "Person.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 185,
+      "symbol": "Person.tags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 200,
+      "symbol": "Person.department",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 215,
+      "symbol": "Person.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 230,
+      "symbol": "Person.job_title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 245,
+      "symbol": "Person.street_1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 260,
+      "symbol": "Person.street_2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 275,
+      "symbol": "Person.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 290,
+      "symbol": "Person.state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 305,
+      "symbol": "Person.zip_code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tharindu/Documents/Entracer/entracer-ios/Entracer/Person.swift",
+      "line": 320,
+      "symbol": "Person.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/tharindu/Documents/Entracer/entracer-ios"
+}
