@@ -10,9 +10,13 @@ import Foundation
 
 /// Organisation status types.
 public enum OrganisationStatus: String {
+    /// New organisation.
     case New
+    /// Active organisation.
     case Active
+    /// Dormant organisation.
     case Dormant
+    /// Blacklisted organisation.
     case Blacklisted
 }
 
@@ -22,6 +26,7 @@ public enum OrganisationStatus: String {
  */
 open class Organisation: NSObject {
     
+    /// Data dictionary.
     fileprivate var _data: NSMutableDictionary
     
     /**
@@ -56,6 +61,7 @@ open class Organisation: NSObject {
     
     // MARK:- Properties
     
+    /// Entracer id for organisation.
     open var ident: String? {
         
         get {
@@ -71,6 +77,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Organisation name.
     open var name: String? {
         
         get {
@@ -85,7 +92,8 @@ open class Organisation: NSObject {
             _data.setValue(newValue, forKey: "name")
         }
     }
-        
+    
+    /// Email address.
     open var email: String? {
         
         get {
@@ -101,6 +109,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Phone number.
     open var phone: String? {
         
         get {
@@ -116,6 +125,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Fax number.
     open var fax: String? {
         
         get {
@@ -131,6 +141,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Website url.
     open var website: String? {
         
         get {
@@ -146,6 +157,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Organisation status could be `New`, `Active`, `Dormant`, `Blacklisted`.
     open var status: String? {
         
         get {
@@ -161,6 +173,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Entracer tags for organisation.
     open var tags: [String]? {
         
         get {
@@ -176,6 +189,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Street 1 for billing address.
     open var billing_street_1: String? {
         
         get {
@@ -191,6 +205,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Street 2 for billing address.
     open var billing_street_2: String? {
         
         get {
@@ -206,6 +221,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// City for billing address.
     open var billing_city: String? {
         
         get {
@@ -221,6 +237,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// State for billing address.
     open var billing_state: String? {
         
         get {
@@ -236,6 +253,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Zip code for billing address.
     open var billing_zip_code: String? {
         
         get {
@@ -251,6 +269,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Country for billing address.
     open var billing_country: String? {
         
         get {
@@ -266,6 +285,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Street 1 for shipping address.
     open var shipping_street_1: String? {
         
         get {
@@ -281,6 +301,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Street 2 for shipping address.
     open var shipping_street_2: String? {
         
         get {
@@ -296,6 +317,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// City for shipping address.
     open var shipping_city: String? {
         
         get {
@@ -311,6 +333,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// State for shipping address.
     open var shipping_state: String? {
         
         get {
@@ -326,6 +349,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Zip code for shipping address.
     open var shipping_zip_code: String? {
         
         get {
@@ -341,6 +365,7 @@ open class Organisation: NSObject {
         }
     }
     
+    /// Country for shipping address.
     open var shipping_country: String? {
         
         get {
