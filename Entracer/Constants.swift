@@ -30,7 +30,7 @@ enum EndPaths: String {
     case createOrUpdate = "/create_or_update"
 }
 
-/// Event channel types examples.
+/// Event channel types examples for api.
 enum EventChannel: String {
     case web
     case mobile
@@ -38,11 +38,17 @@ enum EventChannel: String {
     case support
 }
 
-/// Event device types.
+/// Event device types examples for api.
 enum EventDevice: String {
+    case web = "Web"
+    case mobile = "Mobile"
+}
+
+/// Event os types examples for api.
+enum EventOS: String {
     case windows = "Windows"
     case mac = "Mac"
-    case android = "Android"
+    case Android = "Android"
     case ios = "iOS"
 }
 
