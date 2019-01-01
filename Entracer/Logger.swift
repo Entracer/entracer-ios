@@ -10,7 +10,7 @@ import Foundation
 
 /// Defines levels of logging that could be tagged for log messages.
 public enum LogLevel: Int {
-    /// Displays *none*
+    /// Displays *none*.
     case none = -1
     /// Displays *only* error logs.
     case error = 0
@@ -25,10 +25,15 @@ public enum LogLevel: Int {
 /// `LogMessage` holds all the details for each log message.
 struct LogMessage {
     
+    /// File name.
     let file: String
+    /// Function name.
     let function: String
+    /// Line number in file.
     let lineNumber: Int
+    /// Log message text.
     let text: String
+    /// Log level.
     let level: LogLevel
     
     /**

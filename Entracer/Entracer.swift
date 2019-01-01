@@ -103,7 +103,8 @@ open class Entracer {
         }
         dict["name"] = event
         dict["channel"] = channel
-        dict["device_type"] = EventDevice.ios.rawValue
+        dict["device"] = EventDevice.mobile.rawValue
+        dict["os"] = EventOS.ios.rawValue
         let event = ["event": dict] as [String: AnyObject]
         Logger.debug(text: "Event: \(event)")
         let data = try JSON.data(with: event)
