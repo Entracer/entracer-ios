@@ -40,9 +40,9 @@ enum EventChannel: String {
 
 /// Event device types.
 enum EventDevice: String {
-    case windows = "Web/Windows"
-    case mac = "Web/Mac"
-    case android = "Mobile/Android"
-    case ios = "Mobile/iOS"
+    case windows = "Windows"
+    case mac = "Mac"
+    case android = "Android"
+    case ios = "iOS"
 }
 
