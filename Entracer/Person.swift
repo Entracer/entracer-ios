@@ -10,15 +10,21 @@ import Foundation
 
 /// Person types.
 public enum PersonType: String {
+    /// Lead type person.
     case Lead
+    /// Converted lead.
     case Converted
 }
 
 /// Person status types.
 public enum PersonStatus: String {
+    /// New person.
     case New
+    /// Validated person.
     case Validated
+    /// Qualified person.
     case Qualified
+    /// Rejected person.
     case Rejected
 }
 
@@ -28,7 +34,8 @@ public enum PersonStatus: String {
  */
 open class Person: NSObject {
     
-    open var _data: NSMutableDictionary
+    /// Data dictionary.
+    fileprivate var _data: NSMutableDictionary
     
     /**
      Initializes object with data dictionary.
@@ -62,6 +69,7 @@ open class Person: NSObject {
     
     // MARK:- Properties
     
+    /// Entracer id for person
     open var ident: String? {
         
         get {
@@ -77,6 +85,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Person types could be `Lead`, `Converted`.
     open var type: String? {
         
         get {
@@ -92,6 +101,7 @@ open class Person: NSObject {
         }
     }
     
+    /// First name.
     open var first_name: String? {
         
         get {
@@ -107,6 +117,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Last name.
     open var last_name: String? {
         
         get {
@@ -122,6 +133,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Email address.
     open var email: String? {
         
         get {
@@ -137,6 +149,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Mobile number.
     open var mobile: String? {
         
         get {
@@ -152,6 +165,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Website url.
     open var website: String? {
         
         get {
@@ -167,6 +181,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Person status can be `New`, `Validated`, `Qualified`, `Rejected`
     open var status: String? {
         
         get {
@@ -182,6 +197,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Entracer tags for person.
     open var tags: [String]? {
         
         get {
@@ -197,6 +213,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Department.
     open var department: [String]? {
         
         get {
@@ -212,6 +229,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Person title.
     open var title: [String]? {
         
         get {
@@ -227,6 +245,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Job title.
     open var job_title: [String]? {
         
         get {
@@ -242,6 +261,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Street 1 for address.
     open var street_1: String? {
         
         get {
@@ -257,6 +277,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Street 2 for address.
     open var street_2: String? {
         
         get {
@@ -272,6 +293,7 @@ open class Person: NSObject {
         }
     }
     
+    /// City for address.
     open var city: String? {
         
         get {
@@ -287,6 +309,7 @@ open class Person: NSObject {
         }
     }
     
+    /// State for address.
     open var state: String? {
         
         get {
@@ -302,6 +325,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Zip code for address.
     open var zip_code: String? {
         
         get {
@@ -317,6 +341,7 @@ open class Person: NSObject {
         }
     }
     
+    /// Country.
     open var country: String? {
         
         get {

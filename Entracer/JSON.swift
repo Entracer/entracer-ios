@@ -10,12 +10,19 @@ import Foundation
 
 /// JSON type definitions.
 public enum JSONType: Int {
+    /// Number type json.
     case number
+    /// String type json.
     case string
+    /// Boolean type json.
     case bool
+    /// Array type json.
     case array
+    /// Dictionary type json.
     case dictionary
+    /// Null type json.
     case null
+    /// Unknown json type.
     case unknown
 }
 
@@ -138,6 +145,7 @@ public struct JSON {
 /// Extension for dictionary and array object handling.
 extension JSON {
     
+    /// Array object of `JSON`.
     public var array: [Any]? {
         switch self.type {
         case .array:
@@ -147,6 +155,7 @@ extension JSON {
         }
     }
     
+    /// Dictionary object of `JSON`.
     public var dictionary: [String: Any]? {
         switch self.type {
         case .dictionary:
@@ -160,6 +169,7 @@ extension JSON {
 /// Extension for checking boolean type of a `NSNumber` object.
 extension NSNumber {
     
+    /// Returns true if number is of type `Bool`.
     fileprivate var isBool: Bool
     {
         let boolID = CFBooleanGetTypeID() // the type ID of CFBoolean

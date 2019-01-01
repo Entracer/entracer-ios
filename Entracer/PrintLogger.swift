@@ -11,6 +11,7 @@ import Foundation
 /// Formats and prints messages with print function
 class PrintLogger: LoggerDelegate {
     
+    /// Prints message to console with message information.
     func display(message: LogMessage) {
         print("[Entracer \(message.file)  \(message.function)][\(message.lineNumber)]: \(message.text)")
     }
