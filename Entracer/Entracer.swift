@@ -126,8 +126,14 @@ open class Entracer {
             return [:]
         }
         
-        Network.sendRequest(base: Entracer.instance.apiBasePath, resource: resource, failure: { (status, _, _) in
+        Network.sendRequest(base: Entracer.instance.apiBasePath, resource: resource, failure: { (status, data, _) in
             // Failure code block
+            if let errorData = data {
+                do {
+                    let json = try JSON.init(with: errorData)
+                    Logger.error(text: "Failed trigger Event request with error:\(json)")
+                } catch {}
+            }
             Logger.error(text: "Failed trigger Event request with error status:\(status)")
         }) { ([String: Any], _) in
             // Success code block
@@ -179,8 +185,14 @@ open class Entracer {
             return [:]
         }
         
-        Network.sendRequest(base: Entracer.instance.apiBasePath, resource: resource, failure: { (status, _, _) in
+        Network.sendRequest(base: Entracer.instance.apiBasePath, resource: resource, failure: { (status, data, _) in
             // Failure code block
+            if let errorData = data {
+                do {
+                    let json = try JSON.init(with: errorData)
+                    Logger.error(text: "Failed create or update Person request with error:\(json)")
+                } catch {}
+            }
             Logger.error(text: "Failed create or update Person request with error status:\(status)")
         }) { ([String: Any], _) in
             // Success code block
@@ -232,8 +244,14 @@ open class Entracer {
             return [:]
         }
         
-        Network.sendRequest(base: Entracer.instance.apiBasePath, resource: resource, failure: { (status, _, _) in
+        Network.sendRequest(base: Entracer.instance.apiBasePath, resource: resource, failure: { (status, data, _) in
             // Failure code block
+            if let errorData = data {
+                do {
+                    let json = try JSON.init(with: errorData)
+                    Logger.error(text: "Failed create or update Organisation request with error:\(json)")
+                } catch {}
+            }
             Logger.error(text: "Failed create or update Organisation request with error status:\(status)")
         }) { ([String: Any], _) in
             // Success code block
